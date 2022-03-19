@@ -1,0 +1,70 @@
+// ----- VARIABLES -----
+
+// Color scheme
+:root{
+  // Crie e edite seu esquema de cores aqui
+}
+
+
+
+// Breakpoints
+$mobile: 440px;
+$tablet: 880px;
+$laptop: 1080px;
+
+
+
+// ----- FUNCTIONS -----
+
+// Convert px to rem
+@function rem($pixel){
+  @return ($pixel / 16) * 1rem;
+}
+
+
+
+// ----- MIXINS -----
+
+// Flexbox
+@mixin flex($gap: null){
+  display: flex;
+
+  @if $gap != null{
+    gap: $gap;
+  }
+}
+
+@mixin flex-between($gap: null){
+  @include flex($gap);
+  justify-content: space-between;
+}
+
+@mixin flex-between-center($gap: null){
+  @include flex-between($gap);
+  align-items: center;
+}
+
+@mixin flex-center-center($gap: null){
+  @include flex($gap);
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+// Breakpoints
+@mixin breakpoint($size){
+  @media (max-width: $size){
+    @content;
+  }
+}
+
+
+
+// ----- CLASSES -----
+
+// Container
+.container{
+  width: 1180px; // Escolha a largura do container aqui
+  margin: 0 auto;
+}

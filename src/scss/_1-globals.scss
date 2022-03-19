@@ -1,0 +1,48 @@
+// ----- GLOBAL STYLE -----
+
+// Reset default styles
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body{
+  scroll-behavior: smooth;
+  font-family: sans-serif; // Change a default font family here
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style-position: inside;
+}
+
+img{
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button,
+select,
+input[type="button"],
+input[type="submit"]{
+  display: block;
+  padding: 6px;
+  cursor: pointer;
+}
+
+input{
+  display: block;
+  padding: 6px;
+}
+
+textarea{
+  display: block;
+  padding: 6px;
+  resize: none;
+}
